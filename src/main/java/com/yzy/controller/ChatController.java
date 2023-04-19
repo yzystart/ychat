@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
+import java.io.IOException;
 
 @RestController
 @RequestMapping("/chat")
@@ -22,7 +23,7 @@ public class ChatController {
     ChatGPTService chatGPTService;
 
     @PostMapping("/send")
-    public Result send(@RequestBody MessageParam param) throws ServiceException {
+    public Result send(@RequestBody MessageParam param) throws ServiceException, IOException {
         String replyMessage = chatGPTService.getChatGPTReply(param);
         return Result.success(replyMessage);
     }
