@@ -9,6 +9,6 @@ public class YzyApplication {
 
 
     public static void main(String[] args) {
-        ConfigurableApplicationContext run = SpringApplication.run(YzyApplication.class);
+        ConfigurableApplicationContext factory = SpringApplication.run(YzyApplication.class);
     }
 }
