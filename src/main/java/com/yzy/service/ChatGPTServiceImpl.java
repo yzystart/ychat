@@ -65,7 +65,6 @@ public class ChatGPTServiceImpl implements ChatGPTService{
 
     public static void main(String[] args) {
         String url = "https://api.openai.com/v1/chat/completions";
-        String token = "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";
         String model = "gpt-3.5-turbo";
         new RestTemplate().postForEntity(url, new HttpEntity<>(new Result()), String.class);
 
