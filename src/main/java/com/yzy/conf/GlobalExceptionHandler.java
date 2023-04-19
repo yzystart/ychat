@@ -1,4 +1,4 @@
-package com.yzy;
+package com.yzy.conf;
 
 
 import com.yzy.vo.Result;
